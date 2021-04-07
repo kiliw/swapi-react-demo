@@ -6,10 +6,11 @@ export interface Character {
   name: string
   species: string
   image: string
+  id: string
 }
 
-const CardComponent: FC<Character> = ({ name, species, image }) => (
-  <Card key={name} style={{ width: '12rem' }} className="d-inline-block">
+const CardComponent: FC<Character> = ({ name, species, image, id }) => (
+  <Card key={id} style={{ width: '12rem' }} className="d-inline-block">
     <Card.Body>
       <Card.Img variant="top" src={image} />
       <Card.Title>{name}</Card.Title>
